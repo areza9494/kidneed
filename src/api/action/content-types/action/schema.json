@@ -37,12 +37,6 @@
       "relation": "oneToOne",
       "target": "api::activity.activity"
     },
-    "step": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::step.step",
-      "inversedBy": "actions"
-    },
     "payload": {
       "type": "json"
     }
