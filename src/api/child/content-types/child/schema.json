@@ -31,12 +31,6 @@
       "relation": "oneToMany",
       "target": "api::character.character"
     },
-    "psychologies": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::child-psychologie.child-psychologie",
-      "mappedBy": "child"
-    },
     "schedules": {
       "type": "relation",
       "relation": "oneToMany",
@@ -57,6 +51,12 @@
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
       "inversedBy": "children"
+    },
+    "steps": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::step.step",
+      "mappedBy": "child"
     }
   }
 }
