@@ -57,6 +57,16 @@
       "relation": "oneToMany",
       "target": "api::step.step",
       "mappedBy": "child"
+    },
+    "parent_name": {
+      "type": "string"
+    },
+    "relation": {
+      "type": "enumeration",
+      "enum": [
+        "father",
+        "mother"
+      ]
     }
   }
 }

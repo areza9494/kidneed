@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "child_psychologies",
+  "collectionName": "step_psychologies",
   "info": {
-    "singularName": "child-psychologie",
-    "pluralName": "child-psychologies",
-    "displayName": "childPsychologie",
-    "description": ""
+    "singularName": "step-psychologie",
+    "pluralName": "step-psychologies",
+    "displayName": "StepPsychologie"
   },
   "options": {
     "draftAndPublish": true
@@ -16,22 +15,22 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::psychologie-question.psychologie-question",
-      "mappedBy": "child_psychologie"
+      "mappedBy": "step_psychologie"
     },
     "point": {
       "type": "integer",
       "required": true,
-      "max": 5,
-      "min": 0
+      "min": 0,
+      "max": 5
     },
     "payload": {
       "type": "json"
     },
-    "steps": {
+    "step": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::step.step",
-      "mappedBy": "child_psychologie"
+      "mappedBy": "step_psychologie"
     }
   }
 }

@@ -39,11 +39,11 @@
         "D"
       ]
     },
-    "child_psychologie": {
+    "step_psychologie": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "api::child-psychologie.child-psychologie",
-      "inversedBy": "steps"
+      "target": "api::step-psychologie.step-psychologie",
+      "inversedBy": "step"
     }
   }
 }
