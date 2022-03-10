@@ -12,9 +12,9 @@ module.exports = createCoreController('api::child.child', ({strapi}) => ({
     async create(ctx) {
         const child = await super.create(ctx);
         const date = new Date()
-        const gender = child.gender
-        const childId = child.id
-        const age = child.age
+        const gender = child.data.attributes.gender
+        const childId = child.data.id
+        const age = child.data.attributes.age
         const moment = require("jalali-moment");
         const axios = require("axios");
       
