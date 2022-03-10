@@ -27,11 +27,11 @@
     "payload": {
       "type": "json"
     },
-    "child": {
+    "steps": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::child.child",
-      "inversedBy": "psychologies"
+      "relation": "oneToMany",
+      "target": "api::step.step",
+      "mappedBy": "child_psychologie"
     }
   }
 }
