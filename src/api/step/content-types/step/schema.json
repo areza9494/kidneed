@@ -24,11 +24,26 @@
       "min": 1400,
       "max": 1405
     },
-    "actions": {
+    "child": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::action.action",
-      "mappedBy": "step"
+      "relation": "manyToOne",
+      "target": "api::child.child",
+      "inversedBy": "steps"
+    },
+    "growthArea": {
+      "type": "enumeration",
+      "enum": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    },
+    "child_psychologie": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::child-psychologie.child-psychologie",
+      "inversedBy": "steps"
     }
   }
 }
